@@ -13,3 +13,12 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
     entities: [__dirname + '/../**/*.entity.{ts,js}'],
     synchronize: process.env.TYPEORM_SYNC || dbConfig.synchronize
 }
+
+// MongoDB TypeORM config
+export const mongoConfig: TypeOrmModuleOptions = {
+    type: 'mongodb',
+    url: 'mongodb+srv://m001-student:nfhfc1993@sandbox.nd8hb.mongodb.net/tasks?retryWrites=true&w=majority',
+    synchronize: true,
+    useUnifiedTopology: true,
+    entities: [__dirname + '/../**/*.entity.{ts,js}']
+}
